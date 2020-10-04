@@ -11,7 +11,7 @@ class Main {
 
   // declare variables of amount the debtor is to pay per day, and amount the debtor paid and assign values to them
 
-  int amtPerDay=50000;
+  float amtPerDay=50000f;
 
   float amtPaid=1200000f;
   
@@ -21,7 +21,7 @@ class Main {
   
   float amtLeft;
 
-  float amount=0;
+  float amount=0f;
   
   byte val1=1;
 
