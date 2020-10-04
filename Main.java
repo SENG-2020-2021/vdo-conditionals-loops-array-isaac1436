@@ -55,18 +55,66 @@ class Main {
   byte [] daysPaid = {2,3,4,6,7,8,10,11,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29};
 
   System.out.println("the days paid for are the "+Arrays.toString(daysPaid));
+
+  if(amtPaid%amtPerDay==0){
   
   System.out.println("there were no days where the debtor did not pay the complete amount for that day");
 
+  }
+
+  else {
+
+    float amtNotPayedCompletely=amtPaid%amtPerDay;
+
+    float amtNotPayedCompletely1=amtNotPayedCompletely/2;
+
+    float amtNotPayedCompletely2=amtNotPayedCompletely/2;
+    
+    System.out.println("the debtor did not pay completely on the 10th and 11th and the amt left to pay for those days is $"+amtNotPayedCompletely1+" and $"+amtNotPayedCompletely2+" respectively");
+
+  }
+
   // calculate amount the debtor is left to pay if he did not pay complete fees and the days not paid for or  check if the debtor paid extra and the extra amount he paid for, or if he paid the exact amount needed to be paid and print likewise
    
-  amtLeft=amount-amtPaid;
+  if(amtPaid<amount){
+
+    amtLeft=amount-amtPaid;
+
+    System.out.println("the amount left for the debtor to pay is $"+amtLeft);
+
+  }
    
-  System.out.println("the amount left for the debtor to pay is $"+amtLeft);
+  else{
+
+    System.out.println("the debtor has paid the loan off completely");
+
+  }
    
   System.out.println("the days not paid for are the "+Arrays.toString(daysDefaulted));
 
-  System.out.println("the debtor did not pay extra and he also did not pay the exact amount needed to be paid");
+  if(amtPaid>amount){
+
+    float extra=amtPaid-amount;
+  System.out.println("the debtor paid more than the amount specified so the bank owes the debtor $"+extra);
   
+  }
+
+  else{
+
+    System.out.println("the debtor did not pay the bank in excess so the bank owes the debtor NOTHING");
+
+  }
+
+  if(amtPaid==amount){
+
+    System.out.println("the debtor has paid the exact amt specified");
+
+  }
+
+  else{
+
+    System.out.println("the debtor did not pay the exact amount specified and hence his collateral is now the property of the bank");
+
+  }
   }
 }
