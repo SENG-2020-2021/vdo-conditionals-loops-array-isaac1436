@@ -13,7 +13,7 @@ class Main {
 
   int amtPerDay=50000;
 
-  float amtPaid=1200000;
+  float amtPaid=1200000f;
   
   // declare all the variables needed for your calculations
 
@@ -43,7 +43,7 @@ class Main {
     val1++;    
   }
   System.out.println("This is the report on the loan lent to ISAAC DESMOND NRUEM with matric no 19/1436");
-  
+
   System.out.println("the total amount the debtor is to pay is $"+ amount);
   
   // calculate the days the debtor paid for and print the days in which was paid for starting from the left to the right of the array. Also check if there was a day that the debtor did not pay the complete amount for that day, if yes, print the day and the amount left to pay for that day. 
